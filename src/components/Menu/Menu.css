@@ -1,0 +1,31 @@
+.order-status{
+    list-style: none;
+    width: 100%;
+    /* display: grid; */
+    /* grid-template-columns: 100%; */
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.order-item{
+    margin: 10px;
+    background-color: white;
+    border: 1.5px solid gray;
+    box-shadow: 2px 2px darkgrey;
+    border-radius: 3px;
+}img{
+    width:60px
+}
+
+.order-container{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 20px;
+    padding-bottom: 35px;
+    background-color: currentColor;
+    border-radius: 10px;
+}
+
+
+

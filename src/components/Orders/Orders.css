@@ -1,0 +1,12 @@
+.review-items-container{
+    margin: 0 auto;
+}
+
+.procced-btn{
+    border: 2px solid #2aab96;
+    border-radius: 5px;
+} 
+
+.procced-btn:hover{
+    background-color: #2aab96;
+}
