@@ -38,9 +38,9 @@ const Orders = () => {
   }, []);
   // console.log(cart)
   // console.log(cart)
+  
   const handleRemoveProduct = (product) => {
-    fetch(
-      `https://shrouded-island-44483.herokuapp.com/deletecart/${user.email}`,
+    fetch(`https://shrouded-island-44483.herokuapp.com/deletecart/${user.email}`,
       {
         method: "POST",
         headers: {
@@ -51,7 +51,7 @@ const Orders = () => {
     ).then((res) => {
       if (res) {
         console.log(res);
-        window.location.reload();
+        window.location.reload(false);
       }
     });
   };

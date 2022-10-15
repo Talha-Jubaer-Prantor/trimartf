@@ -6,27 +6,44 @@ import { useState } from 'react';
 
 const Product = ({product, handleAddToCart}) => {
     // const {product, handleAddToCart} = props;
-    const { name, img, seller, price, ratings,quantity } = product;
+    const { name, img, price} = product;
     
-    const BtnText=()=>{
-        const [btn,setBtn]=useState([])
-        const user=JSON.parse(localStorage.getItem('loggedData'))
-        useEffect(()=>{
-            fetch(`https://shrouded-island-44483.herokuapp.com/mycart/${user.email}`)
-            .then(res=>res.json())
-            .then(data=>setBtn(data[0].cart))
-          },[])
+    // const BtnText=()=>{
+        const [btn,setBtn]=useState()
+        // const user=JSON.parse(localStorage.getItem('loggedData'))
+        // useEffect(()=>{
+        //     fetch(`https://shrouded-island-44483.herokuapp.com/mycart/${user.email}`)
+        //     .then(res=>console.log(res))
+            // .then(data=>console.log(data))
+        //   },[])
+        
+        // console.log(product)
         
         
-        
-        
-        if(!btn){
-            return <span> Add to cart </span>
-        }else{
-            return <span> Added</span>
-        }
-    }
+        // if(!btn){
+        //     return <span> Add to cart </span>
+        // }else{
+        //     return <span> Added</span>
+        // }
+    // }
 
+useEffect(()=>{
+    fetch("https://shrouded-island-44483.herokuapp.com/mycart/talhajubaer3020@gmail.com")
+    .then(res=>res.json())
+    .then(data=>setBtn(data[0].cart))
+},[])
+console.log(btn)
+
+const Button=e=>{
+    
+
+    if(btn){
+        return "ase prod"
+    }else{
+        return 'nai'
+    }
+}
+    
     return (
         <div className='product'>
             <img src={img} alt=""></img>
@@ -36,8 +53,9 @@ const Product = ({product, handleAddToCart}) => {
             </div>
             {/* handleAddToCart function is in shop.js */}
             <button onClick={() => {handleAddToCart(product)}} className='btn-cart' id='add'>
-                <FontAwesomeIcon icon={faShoppingCart}/> 
-                {/* <BtnText></BtnText> */}
+                 <FontAwesomeIcon icon={faShoppingCart}/>
+                 {/* <Button></Button> */}
+                 
             </button>
         </div>
     );

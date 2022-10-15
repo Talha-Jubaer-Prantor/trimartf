@@ -49,3 +49,8 @@
     background-color: orange;
     color: rgb(19, 5, 5);
 }
+
+.btn-cart:focus{
+    background-color: #1ed606;
+    color: black;
+}
