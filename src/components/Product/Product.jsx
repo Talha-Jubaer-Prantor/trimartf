@@ -12,7 +12,7 @@ const Product = ({product, handleAddToCart}) => {
         const [btn,setBtn]=useState([])
         const user=JSON.parse(localStorage.getItem('loggedData'))
         useEffect(()=>{
-            fetch(`http://localhost:8080/mycart/${user.email}`)
+            fetch(`https://shrouded-island-44483.herokuapp.com/mycart/${user.email}`)
             .then(res=>res.json())
             .then(data=>setBtn(data[0].cart))
           },[])

@@ -26,7 +26,7 @@ const Shop = () => {
     const handleAddToCart = (selectedProduct) =>{
         const user=JSON.parse(localStorage.getItem('loggedData'))
         if(user){
-         fetch('http://localhost:8080/cart',{
+         fetch('https://shrouded-island-44483.herokuapp.com/cart',{
             method: 'POST',
             headers:{'content-type':'application/json'},
             body: JSON.stringify({'email':user.email,selectedProduct})

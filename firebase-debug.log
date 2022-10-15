@@ -1,0 +1,50 @@
+[debug] [2022-10-15T08:02:55.381Z] ----------------------------------------------------------------------
+[debug] [2022-10-15T08:02:55.382Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\talha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-15T08:02:55.383Z] CLI Version:   11.14.4
+[debug] [2022-10-15T08:02:55.383Z] Platform:      win32
+[debug] [2022-10-15T08:02:55.383Z] Node Version:  v16.15.1
+[debug] [2022-10-15T08:02:55.384Z] Time:          Sat Oct 15 2022 14:02:55 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-15T08:02:55.384Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-15T08:02:55.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-15T08:02:55.391Z] > authorizing via signed-in user (talhajubaer3020@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\PRANTOR\trimart\trimartf
+
+[debug] [2022-10-15T08:04:39.533Z] ----------------------------------------------------------------------
+[debug] [2022-10-15T08:04:39.534Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\talha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-15T08:04:39.535Z] CLI Version:   11.14.4
+[debug] [2022-10-15T08:04:39.535Z] Platform:      win32
+[debug] [2022-10-15T08:04:39.535Z] Node Version:  v16.15.1
+[debug] [2022-10-15T08:04:39.536Z] Time:          Sat Oct 15 2022 14:04:39 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-15T08:04:39.536Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-15T08:04:39.542Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-15T08:04:39.543Z] > authorizing via signed-in user (talhajubaer3020@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\PRANTOR\trimart\trimartf
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
