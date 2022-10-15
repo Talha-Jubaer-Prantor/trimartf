@@ -1,27 +1,7 @@
-/* .header{
-    height: 50px;
-    background-color: #1C2B35;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 140px;
-    padding-right: 140px;
-}
-
-.header h1{
-    color: rgb(218, 184, 32);
-}
-
-.header a{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 17px;
-    margin-left: 36px;
-}
-.header a:hover{
-    color: orange;
-} */
-
 .logo{
     margin-right: 35% !important;
+}
+
+.nav-header{
+    padding: 0% 4%;
 }

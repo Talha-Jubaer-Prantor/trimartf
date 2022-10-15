@@ -32,8 +32,6 @@ const Login = () => {
       }else{
         window.location.replace('/loginerror')
       }
-// console.log(data)
-       
       })
   }
 
