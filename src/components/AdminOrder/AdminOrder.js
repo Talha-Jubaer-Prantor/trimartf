@@ -17,8 +17,8 @@ const AdminOrder = () => {
       <AdminNav></AdminNav>
 
       {confirmedOrders.map((orederItem) => (
-        <div className="order-sec">
-          <div className="order-owner">
+        <div className="admin-order-sec">
+          <div className="admin-order-owner">
             <p>
               <b>Name:</b>
               {orederItem.orderOwner.name}
@@ -34,7 +34,7 @@ const AdminOrder = () => {
           </div>
           {orederItem.order.map((item) => (
             <div className="order-items">
-              <div className="admin-review-item">
+              <div className="admin-order-review-item">
                 <div>
                   <img
                     style={{ borderRadius: "50px" }}

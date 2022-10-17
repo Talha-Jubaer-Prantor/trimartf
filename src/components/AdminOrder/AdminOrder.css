@@ -1,0 +1,51 @@
+.admin-order-sec{
+    margin: 1%;
+    border: 1px solid gray;
+    padding: 1%;
+    width: 98%;
+    margin-bottom: 50px;
+    background-color: #b2b4b485;
+    border-radius: 5px;
+    box-shadow: 5px 7px 25px;
+}
+
+.admin-order-owner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.admin-order-review-item{
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 21px;
+    width:100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.admin-order-review-item img{
+    width: 91px;
+}
+
+.review-item-details p{
+    margin: 0;
+}
+
+.review-item-details-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+}
+
+
+@media only screen and (max-width: 600px) {
+   
+    .admin-order-owner{
+        display: block;
+        padding-top: 0;
+    }
+
+  }
+ 

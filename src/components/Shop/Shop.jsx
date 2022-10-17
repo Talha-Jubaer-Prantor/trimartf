@@ -7,22 +7,7 @@ import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useProducts();
-    // const [cart, setCart] = useState([]);
-
-    // useEffect( () =>{
-    //     const storedCart = getStoredCart();
-    //     const savedCart = [];
-    //     for(const id in storedCart){
-    //         const addedProduct = products.find(product => product.id === id);
-    //         if(addedProduct){
-    //             const quantity = storedCart[id];
-    //             addedProduct.quantity = quantity;
-    //             savedCart.push(addedProduct);
-    //         }
-    //     }
-    //     setCart(savedCart);
-    // }, [products])
-
+    
     const handleAddToCart = (selectedProduct) =>{
         const user=JSON.parse(localStorage.getItem('loggedData'))
         if(user){
@@ -35,7 +20,6 @@ const Shop = () => {
             window.location.replace('/login')
         }
     }
-    // console.log('cart',cart)
 
     return (
             

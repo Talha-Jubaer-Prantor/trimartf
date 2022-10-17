@@ -40,10 +40,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .btn-cart .btn-text{
     margin-right: 5px;
     font-weight: bold;
 }
+
 .btn-cart:hover{
     transition-duration: 500ms;
     background-color: orange;

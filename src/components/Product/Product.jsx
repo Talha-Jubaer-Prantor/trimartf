@@ -55,7 +55,6 @@ const Button=e=>{
             <button onClick={() => {handleAddToCart(product)}} className='btn-cart' id='add'>
                  <FontAwesomeIcon icon={faShoppingCart}/>
                  {/* <Button></Button> */}
-                 
             </button>
         </div>
     );
