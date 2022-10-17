@@ -1,4 +1,5 @@
 import React from "react";
+import AnotherMenu from "../AnotherMenu/AnotherMenu";
 import "./signup.css";
 
 const SignUp = () => {
@@ -9,8 +10,9 @@ const SignUp = () => {
     const email = e.target.email.value;
     const phone = e.target.phone.value;
     const password = e.target.password.value;
+    const address=e.target.address.value
 
-    const user = { name: name, email: email, phone: phone, password: password };
+    const user = { name: name, email: email, phone: phone, password: password, address: address };
 
     // Post data to backend
 
@@ -31,6 +33,8 @@ const SignUp = () => {
   };
 
   return (
+    <div>
+        <AnotherMenu></AnotherMenu>
     <div className="signup-container">
       <h1>Create Account</h1>
       <br />
@@ -94,11 +98,27 @@ const SignUp = () => {
             />
           </div>
         </div>
+
+        <div className="form-group row">
+          <label className="col-sm-2 col-form-label">Address</label>
+          <div className="col-sm-10">
+            <input
+              type="text"
+              name="address"
+              className="form-control"
+              id="inputAddress"
+              placeholder="Address"
+              required
+            />
+          </div>
+        </div>
+
         <br />
         <button type="submit" className="btn btn-primary submit-btn">
           Submit
         </button>
       </form>
+    </div>
     </div>
   );
 };

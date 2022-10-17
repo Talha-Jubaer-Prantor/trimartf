@@ -66,12 +66,3 @@ const Header = () => {
 
 export default Header;
 
-{/* <h1>Okorma Shop</h1>
-<div>
-    <Link to="/shop">Shop</Link>
-    <Link to="/orders">Orders</Link>
-    <Link to="/inventory">Inventory</Link>
-    <Link to="/login">Login</Link>
-    <Link to="/about">About</Link>
-    <Link to="/orders">Review Order</Link>
-</div> */}
