@@ -24,7 +24,7 @@ const Orders = () => {
       body: JSON.stringify(orderData),
     }).then((res) => {
       console.log(res);
-      window.location.reload();
+      window.location.replace("/");
     });
   };
 

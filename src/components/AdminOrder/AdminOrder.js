@@ -31,6 +31,10 @@ console.log(confirmedOrders)
               <b>Phone:</b>
               {orederItem.orderOwner.phone}
             </p>
+            <p>
+              <b>Address:</b>
+              {orederItem.orderOwner.address}
+            </p>
           </div>
           {orederItem.order.map((item) => (
             <div className="order-items">
