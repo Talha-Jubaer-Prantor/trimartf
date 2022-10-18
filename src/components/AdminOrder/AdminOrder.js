@@ -11,7 +11,7 @@ const AdminOrder = () => {
       .then((res) => res.json())
       .then((data) => setConfirmedOrders(data));
   }, []);
-
+console.log(confirmedOrders)
   return (
     <div>
       <AdminNav></AdminNav>
@@ -29,7 +29,7 @@ const AdminOrder = () => {
             </p>
             <p>
               <b>Phone:</b>
-              {orederItem.orderOwner.name}
+              {orederItem.orderOwner.phone}
             </p>
           </div>
           {orederItem.order.map((item) => (

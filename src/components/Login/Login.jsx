@@ -24,9 +24,8 @@ const Login = () => {
       body: JSON.stringify(userDet)
     }).then(res=>res.json())
       .then(data=>{
-
       if(data.userId){
-        window.location.replace("/");
+        // window.location.replace("/")
         localStorage.setItem('loggedData',JSON.stringify(data))
         console.log(data)
       }else{
