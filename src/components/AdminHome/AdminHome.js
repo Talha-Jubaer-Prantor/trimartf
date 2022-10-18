@@ -72,7 +72,11 @@ const AdminHome = (props) => {
             </p>
             <p>
               <b>Phone:</b>
-              {orederItem.orderOwner.name}
+              {orederItem.orderOwner.phone}
+            </p>
+            <p>
+              <b>Address:</b>
+              {orederItem.orderOwner.address}
             </p>
           </div>
           {orederItem.order.map((item) => (
