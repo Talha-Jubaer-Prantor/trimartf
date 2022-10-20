@@ -49,7 +49,7 @@ const Button=e=>{
             <img src={img} alt=""></img>
             <div className='product-info'>
                 <p className='product-name'>{name}</p>
-                <p>Price: ${price}</p>
+                <p>Price: {price} BDT</p>
             </div>
             {/* handleAddToCart function is in shop.js */}
             <button onClick={() => {handleAddToCart(product)}} className='btn-cart' id='add'>

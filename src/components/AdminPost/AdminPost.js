@@ -27,7 +27,13 @@ const AdminPost = () => {
         "content-type": "application/json",
       },
       body: JSON.stringify(adminPostData),
-    });
+    }).then(res=> res.json())
+      .then(data=>{
+        if(data){
+          alert("Product posted successfully");
+          window.location.reload()
+        }
+      })
   };
 
   return (
