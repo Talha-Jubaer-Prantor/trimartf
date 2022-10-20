@@ -34,7 +34,7 @@ const Header = () => {
 
     return (
         
-            <nav className="navbar navbar-expand-lg bg-light nav-header">
+            <nav className="navbar navbar-expand-lg bg-white nav-header">
   <div className="container-fluid">
     <a className="navbar-brand logo" href="/"><img style={{"width":"200px"}} src="banerLogo.PNG" alt="" /> </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
