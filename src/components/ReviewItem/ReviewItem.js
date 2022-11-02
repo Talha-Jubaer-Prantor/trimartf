@@ -1,18 +1,15 @@
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useEffect } from "react";
 import "./ReviewItem.css";
 
 const ReviewItem = (props) => {
   const { product, handleRemoveProduct } = props;
-  const { name, img, price, shipping, quantity } = product;
+  const { name, img, price } = product.item;
+
 
 
   // Fetch cart item from backend /mycart/:id
-
-  
-
   return (
     <div>
       <div className="review-item">

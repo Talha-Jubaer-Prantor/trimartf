@@ -4,8 +4,9 @@
 }
 .products-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 10.6%;
+    row-gap: 50px;
     margin: 52px 50px;
 }
 .cart-container{

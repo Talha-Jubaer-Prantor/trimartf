@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 const AdminOrder = () => {
   const [confirmedOrders, setConfirmedOrders] = useState([]);
   useEffect(() => {
-    fetch("https://shrouded-island-44483.herokuapp.com/confirmedorder")
+    fetch("http://localhost:8080/confirmedorder")
       .then((res) => res.json())
       .then((data) => setConfirmedOrders(data));
   }, []);
-console.log(confirmedOrders)
+  console.log(confirmedOrders);
   return (
     <div>
       <AdminNav></AdminNav>
@@ -36,32 +36,33 @@ console.log(confirmedOrders)
               {orederItem.orderOwner.address}
             </p>
           </div>
-          {orederItem.order.map((item) => (
+          {orederItem.order.map((items) => (
             <div className="order-items">
               <div className="admin-order-review-item">
                 <div>
                   <img
                     style={{ borderRadius: "50px" }}
-                    src={item.img}
+                    src={items.item.img}
                     alt="img"
                   />
                 </div>
                 <div className="review-item-details-container">
                   <div className="review-item-details">
-                    <p className="product-name" title={item.name}>
-                      {item.name.length > 20
-                        ? item.name.slice(0, 20) + "..."
-                        : item.name}
+                    <p className="product-name" title={items.item.name}>
+                      {items.item.name.length > 20
+                        ? items.item.name.slice(0, 20) + "..."
+                        : items.item.name}
                     </p>
                     <p>
                       Price:{" "}
-                      <span className="orange-color">{item.price} BDT</span>
+                      <span className="orange-color">{items.item.price} BDT</span>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+          <button type="button" class="btn btn-danger">Delete</button>
         </div>
       ))}
     </div>

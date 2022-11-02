@@ -10,6 +10,9 @@ import Orders from './components/Orders/Orders';
 import Shop from './components/Shop/Shop';
 import SignUp from './components/SignUp/SignUp';
 import AdminPost from './components/AdminPost/AdminPost';
+import AdminControlPage from './components/AdminControlPage/AdminControlPage';
+import About from './components/About/About';
+import ProductDet from './components/ProductDet/ProductDet';
 
 function App() {
   return (
@@ -22,15 +25,14 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/menu' element={<Menu></Menu>}></Route>
         <Route path='/loginerror' element={<LoginError></LoginError>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/controlerpage' element={<AdminControlPage></AdminControlPage>}></Route>
+        <Route path='/productdetails' element={<ProductDet></ProductDet>}></Route>
         <Route path='/controlerpage/home' element={<AdminHome></AdminHome>}></Route>
         <Route path='/controlerpage/order' element={<AdminOrder></AdminOrder>}></Route>
         <Route path='/controlerpage/post' element={<AdminPost></AdminPost>}></Route>
-
-        
-
-
       </Routes>
-      {/* <Footer></Footer> */}
+      
     </div>
   );
 }

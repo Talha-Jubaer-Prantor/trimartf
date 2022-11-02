@@ -1,5 +1,6 @@
 import { Alert } from 'bootstrap';
 import React from 'react';
+import { render } from 'react-dom';
 import AnotherMenu from '../AnotherMenu/AnotherMenu';
 import './Login.css'
 const Login = () => {
@@ -16,7 +17,7 @@ const Login = () => {
         'password':password
       }
 
-      fetch('https://shrouded-island-44483.herokuapp.com/signin',{
+      fetch('http://localhost:8080/signin',{
       method: 'POST',
       headers:{
         'content-type':'application/json'
@@ -29,7 +30,7 @@ const Login = () => {
         localStorage.setItem('loggedData',JSON.stringify(data))
         console.log(data)
       }else{
-        window.location.replace('/loginerror')
+        window.location.replace('/loginerror')        
       }
       })
   }

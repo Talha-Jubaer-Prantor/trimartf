@@ -1,26 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import useProducts from '../../hooks/useProducts';
-import { getStoredCart } from '../../utilities/fakedb';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
+import ProductDet from '../ProductDet/ProductDet';
 import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useProducts();
-    
+    const [selectedProduct,setSelectedProduct]=useState({})
+ 
     const handleAddToCart = (selectedProduct) =>{
-        const user=JSON.parse(localStorage.getItem('loggedData'))
-        if(user){
-         fetch('https://shrouded-island-44483.herokuapp.com/cart',{
-            method: 'POST',
-            headers:{'content-type':'application/json'},
-            body: JSON.stringify({'email':user.email,selectedProduct})
-            })
-        }else{
-            window.location.replace('/login')
-        }
+            setSelectedProduct(selectedProduct)
+            console.log(selectedProduct)
+                return <ProductDet productDet={selectedProduct}></ProductDet>
     }
-
     return (
             
             <div>
@@ -36,6 +30,7 @@ const Shop = () => {
                 }
             </div>
         </div>
+        <Footer></Footer>
         </div>
     );
 };

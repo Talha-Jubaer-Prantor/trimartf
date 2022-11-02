@@ -1,0 +1,8 @@
+.product-det{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-left: 8%;
+    margin-right: 3%;
+    margin-top: 50px;
+}
+

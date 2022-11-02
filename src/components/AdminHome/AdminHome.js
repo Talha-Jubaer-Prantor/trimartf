@@ -8,11 +8,11 @@ const AdminHome = (props) => {
   const [orederItems, setOrderItem] = useState([]);
 
   useEffect(() => {
-    fetch("https://shrouded-island-44483.herokuapp.com/order")
+    fetch("http://localhost:8080/order")
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
-
+console.log(orederItems)
   // Order confirm button
   const handleConfirmOrder = (props) => {
     const id = props;
@@ -20,7 +20,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("https://shrouded-island-44483.herokuapp.com/confirmorder", {
+    fetch("http://localhost:8080/confirmorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -33,7 +33,7 @@ const AdminHome = (props) => {
 
   // const handleDeleteOrder=(props)=>{
   //   const userId=props
-  //   fetch(`https://shrouded-island-44483.herokuapp.com/deleteorder/${userId}`,{
+  //   fetch(`http://localhost:8080/deleteorder/${userId}`,{
   //     method:'DELETE'
   //   })
 
@@ -47,7 +47,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("https://shrouded-island-44483.herokuapp.com/deleteorder", {
+    fetch("http://localhost:8080/deleteorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,26 +79,27 @@ const AdminHome = (props) => {
               {orederItem.orderOwner.address}
             </p>
           </div>
-          {orederItem.order.map((item) => (
+          {orederItem.order.map((items) => (
             <div className="order-items">
               <div className="admin-review-item">
                 <div>
                   <img
                     style={{ borderRadius: "50px" }}
-                    src={item.img}
+                    src={items.item.img}
                     alt="img"
                   />
                 </div>
                 <div className="review-item-details-container">
                   <div className="review-item-details">
-                    <p className="product-name" title={item.name}>
-                      {item.name.length > 20
+                    <p className="product-name" title={items.name}>
+                      {/* {item.name.length > 20
                         ? item.name.slice(0, 20) + "..."
-                        : item.name}
+                        : item.name} */}
+                        {items.item.name}
                     </p>
                     <p>
                       Price:{" "}
-                      <span className="orange-color">{item.price} BDT</span>
+                      <span className="orange-color">{items.item.price} BDT</span>
                     </p>
                   </div>
                 </div>

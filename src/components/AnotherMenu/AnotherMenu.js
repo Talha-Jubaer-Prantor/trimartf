@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AnotherMenu = () => {
     return (
         <div>
             <nav className="navbar navbar-light bg-light justify-content-between container">
-                <a className="navbar-brand" href='/'><b>Trimart</b></a>
+                <Link className="navbar-brand" to='/'><b>Trimart</b></Link>
                 <div>
-                <b><a style={{'textDecoration':'none','color':'black'}} className="btn my-2 my-sm-0" href='/'>Home</a></b>
+                <b><Link style={{'textDecoration':'none','color':'black'}} className="btn my-2 my-sm-0" to='/'>Home</Link></b>
                 </div>
             </nav>
         </div>

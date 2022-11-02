@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import AnotherMenu from "../AnotherMenu/AnotherMenu";
+import Footer from "../Footer/Footer";
 import "./Menu.css";
 
 const Menu = (product) => {
@@ -10,11 +11,11 @@ const Menu = (product) => {
   const user = JSON.parse(localStorage.getItem("loggedData"));
   const userId = user.userId;
   useEffect(() => {
-    fetch(`https://shrouded-island-44483.herokuapp.com/myorder/${userId}`)
+    fetch(`http://localhost:8080/myorder/${userId}`)
       .then((res) => res.json())
       .then((data) => setGoods(data));
   }, []);
-
+console.log(goods)
   return (
     <div className="menu">
       <AnotherMenu></AnotherMenu>
@@ -25,8 +26,8 @@ const Menu = (product) => {
           <div className="order-container">
             {good.order.map((orderItem) => (
               <li className="order-item">
-                <img src={orderItem.img} alt="" />
-                {orderItem.name}
+                <img src={orderItem.item.img} alt="" />
+                <span style={{marginLeft:"1%"}}>{orderItem.item.name}</span>
               </li>
             ))}
 
@@ -49,6 +50,7 @@ const Menu = (product) => {
         ))}
         {/* Menu List */}
       </div>
+      <Footer></Footer>
     </div>
   );
 };
