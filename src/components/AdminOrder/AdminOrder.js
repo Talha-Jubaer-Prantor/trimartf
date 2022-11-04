@@ -3,7 +3,6 @@ import "./AdminOrder.css";
 import AdminNav from "../AdminNav/AdminNav";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 const AdminOrder = () => {
   const [confirmedOrders, setConfirmedOrders] = useState([]);
   useEffect(() => {
@@ -12,11 +11,23 @@ const AdminOrder = () => {
       .then((data) => setConfirmedOrders(data));
   }, []);
   console.log(confirmedOrders);
+
+  const handleDelete = (props) => {
+    console.log(props);
+    fetch(`http://localhost:8080/deleteconfirmorder/${props._id}`, {
+      method: "delete",
+    }).then(window.location.reload());
+  };
+
   return (
     <div>
       <AdminNav></AdminNav>
-
-      {confirmedOrders.map((orederItem) => (
+      <div className="order-section">
+        <div >
+        <p style={{ writingMode: " vertical-rl" }}> ======================= ORDER =======================</p>
+        </div>
+        <div>
+        {confirmedOrders.map((orederItem) => (
         <div className="admin-order-sec">
           <div className="admin-order-owner">
             <p>
@@ -62,9 +73,11 @@ const AdminOrder = () => {
               </div>
             </div>
           ))}
-          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" onClick={()=>handleDelete(orederItem)} class="btn btn-danger">Delete</button>
         </div>
       ))}
+        </div>
+      </div>
     </div>
   );
 };

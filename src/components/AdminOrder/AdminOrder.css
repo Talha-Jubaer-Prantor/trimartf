@@ -39,6 +39,10 @@
     padding-left: 2%;
 }
 
+.order-section{
+    display: grid;
+    grid-template-columns: 3% 96%;
+}
 
 @media only screen and (max-width: 600px) {
    

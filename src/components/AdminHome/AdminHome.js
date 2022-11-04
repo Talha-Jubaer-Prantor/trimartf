@@ -12,7 +12,7 @@ const AdminHome = (props) => {
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
-console.log(orederItems)
+
   // Order confirm button
   const handleConfirmOrder = (props) => {
     const id = props;
@@ -31,16 +31,6 @@ console.log(orederItems)
     });
   };
 
-  // const handleDeleteOrder=(props)=>{
-  //   const userId=props
-  //   fetch(`http://localhost:8080/deleteorder/${userId}`,{
-  //     method:'DELETE'
-  //   })
-
-  //   window.location.reload()
-
-  // }
-
   const handleDeleteOrder = (props) => {
     const id = props;
     console.log(id);
@@ -58,70 +48,79 @@ console.log(orederItems)
   return (
     <div>
       <AdminNav></AdminNav>
+      <div className="home-sec">
+        <div>
+          <p style={{ writingMode: " vertical-rl" }}> ======================= HOME =======================</p>
+        </div>
 
-      {orederItems.map((orederItem) => (
-        <div className="order-sec">
-          <div className="order-owner">
-            <p>
-              <b>Name:</b>
-              {orederItem.orderOwner.name}
-            </p>
-            <p>
-              <b>Email:</b>
-              {orederItem.orderOwner.email}
-            </p>
-            <p>
-              <b>Phone:</b>
-              {orederItem.orderOwner.phone}
-            </p>
-            <p>
-              <b>Address:</b>
-              {orederItem.orderOwner.address}
-            </p>
-          </div>
-          {orederItem.order.map((items) => (
-            <div className="order-items">
-              <div className="admin-review-item">
-                <div>
-                  <img
-                    style={{ borderRadius: "50px" }}
-                    src={items.item.img}
-                    alt="img"
-                  />
-                </div>
-                <div className="review-item-details-container">
-                  <div className="review-item-details">
-                    <p className="product-name" title={items.name}>
-                      {/* {item.name.length > 20
+        <div>
+          {orederItems.map((orederItem) => (
+            <div className="order-sec">
+              <div className="order-owner">
+                <p>
+                  <b>Name:</b>
+                  {orederItem.orderOwner.name}
+                </p>
+                <p>
+                  <b>Email:</b>
+                  {orederItem.orderOwner.email}
+                </p>
+                <p>
+                  <b>Phone:</b>
+                  {orederItem.orderOwner.phone}
+                </p>
+                <p>
+                  <b>Address:</b>
+                  {orederItem.orderOwner.address}
+                </p>
+              </div>
+              {orederItem.order.map((items) => (
+                <div className="order-items">
+                  <div className="admin-review-item">
+                    <div>
+                      <img
+                        style={{ borderRadius: "50px" }}
+                        src={items.item.img}
+                        alt="img"
+                      />
+                    </div>
+                    <div className="review-item-details-container">
+                      <div className="review-item-details">
+                        <p className="product-name" title={items.name}>
+                          {/* {item.name.length > 20
                         ? item.name.slice(0, 20) + "..."
                         : item.name} */}
-                        {items.item.name}
-                    </p>
-                    <p>
-                      Price:{" "}
-                      <span className="orange-color">{items.item.price} BDT</span>
-                    </p>
+                          {items.item.name}
+                        </p>
+                        <p>
+                          Price:{" "}
+                          <span className="orange-color">
+                            {items.item.price} BDT
+                          </span>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
+              <button
+                type="button"
+                onClick={() => handleConfirmOrder(orederItem._id)}
+                className="btn btn-success"
+              >
+                Confirm Order
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDeleteOrder(orederItem._id)}
+                className="btn btn-danger"
+              >
+                Delete Order
+              </button>
             </div>
           ))}
-          <button
-            type="button"
-            onClick={() => handleConfirmOrder(orederItem._id)}
-            className="btn btn-success"
-          >
-            Confirm Order
-          </button>
-          <button
-            type="button"
-            onClick={() => handleDeleteOrder(orederItem._id)}
-            className="btn btn-danger"
-          >
-            Delete Order
-          </button>
         </div>
-      ))}
+      </div>
     </div>
   );
 };

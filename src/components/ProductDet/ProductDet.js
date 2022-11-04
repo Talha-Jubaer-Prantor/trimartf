@@ -51,14 +51,7 @@ const ProductDet = () => {
               {product.description}
             </p>
           </p>
-          <form > 
-            <h4>Quantity 
-            <input onChange={quantityControl} style={{width:"50px"}} type="number" min={0} name="quantity" defaultValue={1}  id="quantity"/></h4>
-            <br />
-            <h4>Price: {newPrice}</h4>
-            <br /><br /><br />
-            <button type="button" onClick={handleOrder} className="btn btn-success">Add</button>
-          </form>
+            <button style={{marginTop:'min(35vh)'}} type="button" onClick={handleOrder} className="btn btn-success">Add</button>
         </div>
       </div>
     </div>
