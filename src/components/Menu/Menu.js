@@ -11,11 +11,11 @@ const Menu = (product) => {
   const user = JSON.parse(localStorage.getItem("loggedData"));
   const userId = user.userId;
   useEffect(() => {
-    fetch(`http://localhost:8080/myorder/${userId}`)
+    fetch(`https://trimartb-talha-jubaer-prantor.vercel.app/myorder/${userId}`)
       .then((res) => res.json())
       .then((data) => setGoods(data));
   }, []);
-console.log(goods)
+  console.log(goods);
   return (
     <div className="menu">
       <AnotherMenu></AnotherMenu>
@@ -27,7 +27,7 @@ console.log(goods)
             {good.order.map((orderItem) => (
               <li className="order-item">
                 <img src={orderItem.item.img} alt="" />
-                <span style={{marginLeft:"1%"}}>{orderItem.item.name}</span>
+                <span style={{ marginLeft: "1%" }}>{orderItem.item.name}</span>
               </li>
             ))}
 

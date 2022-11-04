@@ -7,29 +7,26 @@ import "./ProductDet.css";
 const ProductDet = () => {
   const location = useLocation();
   const [product, setProduct] = useState(location.state);
-  const [newPrice,setNewPrice]=useState(product.price)
+  const [newPrice, setNewPrice] = useState(product.price);
   const user = JSON.parse(localStorage.getItem("loggedData"));
-  
-    const quantityControl=(e)=>{
-      const quantity=e.target.value
-      const total=quantity*product.price
-      setNewPrice(total)
-      }
-  
 
-      
-     function handleOrder(){
-        if(user){
-              fetch('http://localhost:8080/cart',{
-                 method: 'POST',
-                 headers:{'content-type':'application/json'},
-                 body: JSON.stringify({'email':user.email,product})
-                 })
-             }else{
-                 window.location.replace('/login')
-             }
-      }
+  const quantityControl = (e) => {
+    const quantity = e.target.value;
+    const total = quantity * product.price;
+    setNewPrice(total);
+  };
 
+  function handleOrder() {
+    if (user) {
+      fetch("https://trimartb-talha-jubaer-prantor.vercel.app/cart", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email: user.email, product }),
+      });
+    } else {
+      window.location.replace("/login");
+    }
+  }
 
   return (
     <div>
@@ -47,11 +44,16 @@ const ProductDet = () => {
           </p>
           <p>
             Description
-            <p>
-              {product.description}
-            </p>
+            <p>{product.description}</p>
           </p>
-            <button style={{marginTop:'min(35vh)'}} type="button" onClick={handleOrder} className="btn btn-success">Add</button>
+          <button
+            style={{ marginTop: "min(35vh)" }}
+            type="button"
+            onClick={handleOrder}
+            className="btn btn-success"
+          >
+            Add
+          </button>
         </div>
       </div>
     </div>

@@ -14,29 +14,33 @@ const AdminPost = () => {
     const name = e.target.name.value;
     const price = e.target.price.value;
     const img = e.target.image.value;
-    const category = e.target.category.value
-    const description=e.target.description.value
-    const data = { name: name, price: price, img: img ,category: category,description:description};
+    const category = e.target.category.value;
+    const description = e.target.description.value;
+    const data = {
+      name: name,
+      price: price,
+      img: img,
+      category: category,
+      description: description,
+    };
     setPreviewData(data);
     console.log(data);
   };
 
   const postOrders = (previewData) => {
     const adminPostData = previewData;
-    fetch("http://localhost:8080/adminpost", {
+    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/adminpost", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(adminPostData),
-    })
-      .then((res) => {
-        if(res){
-          alert("Product posted successfully");
-          window.location.reload();
-        }
-      })
-      
+    }).then((res) => {
+      if (res) {
+        alert("Product posted successfully");
+        window.location.reload();
+      }
+    });
   };
 
   return (
@@ -88,11 +92,10 @@ const AdminPost = () => {
             </div>
           </div>
 
-
           <div className="form-group row">
             <label className="col-sm-2 col-form-label">Category</label>
             <div className="col-sm-10">
-              <select style={{"marginTop":"8px"}} name="category">
+              <select style={{ marginTop: "8px" }} name="category">
                 <option value="">Select Category</option>
                 <option value="Home decoration">Home decoration</option>
                 <option value="Children items">Children items</option>
@@ -100,12 +103,12 @@ const AdminPost = () => {
             </div>
           </div>
 
-<br />
+          <br />
 
           <div className="form-group row">
             <label className="col-sm-2 col-form-label">Description</label>
             <div className="col-sm-10">
-              <textarea name="description"  cols="65" rows="10"></textarea>
+              <textarea name="description" cols="65" rows="10"></textarea>
             </div>
           </div>
 
@@ -121,19 +124,30 @@ const AdminPost = () => {
               <p className="product-name">
                 {previewData.name ? previewData.name : "name"}
               </p>
-              <p><b>Price: <span style={{"color":"red"}}>{previewData.price ? previewData.price : "__"} </span></b><span style={{"color":"#03c703"}}>BDT</span></p>
-              <p style={{"fontSize":"15px"}}>{previewData.category ? previewData.category:""}</p>
+              <p>
+                <b>
+                  Price:{" "}
+                  <span style={{ color: "red" }}>
+                    {previewData.price ? previewData.price : "__"}{" "}
+                  </span>
+                </b>
+                <span style={{ color: "#03c703" }}>BDT</span>
+              </p>
+              <p style={{ fontSize: "15px" }}>
+                {previewData.category ? previewData.category : ""}
+              </p>
               {/* <p style={{"fontSize":"15px"}}>Category: {previewData.category}</p> */}
-              
             </div>
           </div>
-          
-            <a style={{ color: "white", textDecoration: "none" }}href="/controlerpage/post">
-              <button type="button" className="btn btn-secondary">
+
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/controlerpage/post"
+          >
+            <button type="button" className="btn btn-secondary">
               Reset
-              </button>
-            </a>
-          
+            </button>
+          </a>
         </div>
       </div>
       <div className="createPostBtn">

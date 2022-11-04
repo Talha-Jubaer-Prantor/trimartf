@@ -8,7 +8,7 @@ const AdminHome = (props) => {
   const [orederItems, setOrderItem] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/order")
+    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/order")
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
@@ -20,7 +20,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("http://localhost:8080/confirmorder", {
+    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/confirmorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("http://localhost:8080/deleteorder", {
+    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/deleteorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -50,7 +50,10 @@ const AdminHome = (props) => {
       <AdminNav></AdminNav>
       <div className="home-sec">
         <div>
-          <p style={{ writingMode: " vertical-rl" }}> ======================= HOME =======================</p>
+          <p style={{ writingMode: " vertical-rl" }}>
+            {" "}
+            ======================= HOME =======================
+          </p>
         </div>
 
         <div>
