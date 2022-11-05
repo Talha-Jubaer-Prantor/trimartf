@@ -28,6 +28,7 @@ const Menu = (product) => {
               <li className="order-item">
                 <img src={orderItem.item.img} alt="" />
                 <span style={{ marginLeft: "1%" }}>{orderItem.item.name}</span>
+                <span style={{float:"right",marginRight:'2%' }}><b>Price: {orderItem.item.price} BDT</b></span>
               </li>
             ))}
 
@@ -48,7 +49,6 @@ const Menu = (product) => {
             )}
           </div>
         ))}
-        {/* Menu List */}
       </div>
       <Footer></Footer>
     </div>
