@@ -51,7 +51,6 @@ const AdminHome = (props) => {
       <div className="home-sec">
         <div>
           <p style={{ writingMode: " vertical-rl" }}>
-            {" "}
             ======================= HOME =======================
           </p>
         </div>

@@ -19,7 +19,8 @@ const AdminOrder = () => {
   const handleDelete = (props) => {
     console.log(props);
     fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/deleteconfirmorder/${props._id}`,
+      `https://trimartb-talha-jubaer-prantor.vercel.app/
+deleteconfirmorder/${props._id}`,
       {
         method: "delete",
       }

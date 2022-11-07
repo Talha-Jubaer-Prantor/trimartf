@@ -31,11 +31,23 @@ const SignUp = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data) {
-          console.log(data);
+        if (data === true) {
+          console.log("User alredy exists");
+          window.location.replace("/existinguser");
+        } else {
+          console.log("new user created");
           window.location.replace("/login");
         }
       });
+    // .then((data) => {
+    //   if (data) {
+    //     console.log("data");
+    //     // window.location.replace("/login");
+    //   }else{
+    //     console.log("false")
+    //   }
+    // }
+    // );
   };
 
   return (

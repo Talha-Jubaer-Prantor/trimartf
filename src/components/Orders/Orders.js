@@ -31,16 +31,17 @@ const Orders = () => {
 
   // Fetching from backend to cart
   const [cart, setCart] = useState([]);
-  const [isLoading,setIsLoading]=useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const user = JSON.parse(localStorage.getItem("loggedData"));
   useEffect(() => {
     fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/mycart/${user.email}`
+      `https://trimartb-talha-jubaer-prantor.vercel.app/
+mycart/${user.email}`
     )
       .then((res) => res.json())
       .then((data) => {
-        setCart(data)
-        setIsLoading(false)
+        setCart(data);
+        setIsLoading(false);
       });
   }, []);
   // console.log(cart)
@@ -48,7 +49,8 @@ const Orders = () => {
   const handleRemoveProduct = (product) => {
     console.log(product._id);
     fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/deletecart/${product._id}`,
+      `https://trimartb-talha-jubaer-prantor.vercel.app/
+deletecart/${product._id}`,
       {
         method: "DELETE",
       }
@@ -66,21 +68,27 @@ const Orders = () => {
     <div className="shop-container">
       <AnotherMenu></AnotherMenu>
 
-
-    {
-      isLoading ?
-      <div style={{ textAlign: "center", paddingTop: "25vh" , paddingBottom:"25vh"}}><h1>Loading Resources...</h1></div>
-      :
-      <div className="review-items-container">
-        {cart.map((product) => (
-          <ReviewItem
-            // key={product.id}
-            product={product}
-            handleRemoveProduct={handleRemoveProduct}
-          ></ReviewItem>
-        ))}
-      </div>
-    }
+      {isLoading ? (
+        <div
+          style={{
+            textAlign: "center",
+            paddingTop: "25vh",
+            paddingBottom: "25vh",
+          }}
+        >
+          <h1>Loading Resources...</h1>
+        </div>
+      ) : (
+        <div className="review-items-container">
+          {cart.map((product) => (
+            <ReviewItem
+              // key={product.id}
+              product={product}
+              handleRemoveProduct={handleRemoveProduct}
+            ></ReviewItem>
+          ))}
+        </div>
+      )}
 
       <div className="cart-container">
         <Cart cart={cart}>

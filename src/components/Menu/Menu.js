@@ -11,7 +11,8 @@ const Menu = (product) => {
   const user = JSON.parse(localStorage.getItem("loggedData"));
   const userId = user.userId;
   useEffect(() => {
-    fetch(`https://trimartb-talha-jubaer-prantor.vercel.app/myorder/${userId}`)
+    fetch(`https://trimartb-talha-jubaer-prantor.vercel.app/
+myorder/${userId}`)
       .then((res) => res.json())
       .then((data) => setGoods(data));
   }, []);
@@ -28,7 +29,9 @@ const Menu = (product) => {
               <li className="order-item">
                 <img src={orderItem.item.img} alt="" />
                 <span style={{ marginLeft: "1%" }}>{orderItem.item.name}</span>
-                <span style={{float:"right",marginRight:'2%' }}><b>Price: {orderItem.item.price} BDT</b></span>
+                <span style={{ float: "right", marginRight: "2%" }}>
+                  <b>Price: {orderItem.item.price} BDT</b>
+                </span>
               </li>
             ))}
 
@@ -36,15 +39,13 @@ const Menu = (product) => {
               <span
                 style={{ float: "right", color: "#21da02", paddingRight: "1%" }}
               >
-                {" "}
-                <b>Order Confirmed</b>{" "}
+                <b>Order Confirmed</b>
               </span>
             ) : (
               <span
                 style={{ float: "right", color: "red", paddingRight: "1%" }}
               >
-                {" "}
-                <b>Waiting for confirmation</b>{" "}
+                <b>Waiting for confirmation</b>
               </span>
             )}
           </div>

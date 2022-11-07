@@ -13,6 +13,7 @@ import AdminPost from './components/AdminPost/AdminPost';
 import AdminControlPage from './components/AdminControlPage/AdminControlPage';
 import About from './components/About/About';
 import ProductDet from './components/ProductDet/ProductDet';
+import UserExists from './components/SignUp/UserExists';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route path='/controlerpage/home' element={<AdminHome></AdminHome>}></Route>
         <Route path='/controlerpage/order' element={<AdminOrder></AdminOrder>}></Route>
         <Route path='/controlerpage/post' element={<AdminPost></AdminPost>}></Route>
+        <Route path='/existinguser' element={<UserExists></UserExists>}></Route>
+
       </Routes>
       
     </div>
