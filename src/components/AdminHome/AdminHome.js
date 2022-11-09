@@ -105,6 +105,27 @@ const AdminHome = (props) => {
                   </div>
                 </div>
               ))}
+              <div>
+                <h5>
+                  Payment number:{" "}
+                  <span style={{ color: "red" }}>
+                    {orederItem.transiction.paymentNum}
+                  </span>
+                </h5>
+                <h5>
+                  Transiction Id:{" "}
+                  <span style={{ color: "red" }}>
+                    {orederItem.transiction.trxId}
+                  </span>
+                </h5>
+                <h5>
+                  Payment via:{" "}
+                  <span style={{ color: "red" }}>
+                    {orederItem.transiction.method}
+                  </span>
+                </h5>
+              </div>
+
               <button
                 type="button"
                 onClick={() => handleConfirmOrder(orederItem._id)}
@@ -128,3 +149,4 @@ const AdminHome = (props) => {
 };
 
 export default AdminHome;
+

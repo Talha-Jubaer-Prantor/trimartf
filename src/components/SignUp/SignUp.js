@@ -39,15 +39,6 @@ const SignUp = () => {
           window.location.replace("/login");
         }
       });
-    // .then((data) => {
-    //   if (data) {
-    //     console.log("data");
-    //     // window.location.replace("/login");
-    //   }else{
-    //     console.log("false")
-    //   }
-    // }
-    // );
   };
 
   return (

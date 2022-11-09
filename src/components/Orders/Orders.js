@@ -7,36 +7,15 @@ import "./Orders.css";
 
 const Orders = () => {
   // THIS FUNCTION WILL POST DATA IN DATABASE AT FETCH METHOD
-  const handleCheakOut = (props) => {
-    const orders = props;
-    console.log(orders);
-    const user = JSON.parse(localStorage.getItem("loggedData"));
-
-    if (user == null) {
-      window.location.replace("/login");
-    }
-    const userId = user.userId;
-    const orderData = { user: user, orders, userId };
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/order", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(orderData),
-    }).then((res) => {
-      console.log(res);
-      window.location.replace("/");
-    });
-  };
 
   // Fetching from backend to cart
   const [cart, setCart] = useState([]);
+  console.log(cart);
   const [isLoading, setIsLoading] = useState(true);
   const user = JSON.parse(localStorage.getItem("loggedData"));
   useEffect(() => {
     fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/
-mycart/${user.email}`
+      `https://trimartb-talha-jubaer-prantor.vercel.app/mycart/${user.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -44,13 +23,11 @@ mycart/${user.email}`
         setIsLoading(false);
       });
   }, []);
-  // console.log(cart)
 
   const handleRemoveProduct = (product) => {
     console.log(product._id);
     fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/
-deletecart/${product._id}`,
+      `https://trimartb-talha-jubaer-prantor.vercel.app/deletecart/${product._id}`,
       {
         method: "DELETE",
       }
@@ -90,13 +67,17 @@ deletecart/${product._id}`,
         </div>
       )}
 
-      <div className="cart-container">
-        <Cart cart={cart}>
-          <button className="procced-btn" onClick={() => handleCheakOut(cart)}>
-            Proceed Checkout
-          </button>
-        </Cart>
-      </div>
+      {cart[0] ? (
+        <div className="cart-container">
+          <Cart cart={cart}></Cart>
+        </div>
+      ) : (
+        <div style={{ textAlign: "center", paddingTop: "25vh" }}>
+          {" "}
+          <h1>No order placed yet</h1>
+        </div>
+      )}
+
       <Footer></Footer>
     </div>
   );
