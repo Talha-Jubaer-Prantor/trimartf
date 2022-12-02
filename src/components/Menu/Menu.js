@@ -25,18 +25,18 @@ myorder/${userId}`)
     <div className="menu">
       <AnotherMenu></AnotherMenu>
       <div className="order-status">
-        <h4 style={{ textAlign: "center" }}>My Orders</h4>
+        <h4 style={{ textAlign: "center",color:"white" }}>My Orders</h4>
         {/* Menu List */}
 
         {isLoading ? (
           <div
             style={{
               textAlign: "center",
-              paddingTop: "25vh",
-              paddingBottom: "25vh",
+              paddingTop: "25px",
+              paddingBottom: "25px",
             }}
           >
-            <h1>Loading resources...</h1>
+            <h1 style={{color:"white"}}>Loading resources...</h1>
           </div>
         ) : (
           <div>

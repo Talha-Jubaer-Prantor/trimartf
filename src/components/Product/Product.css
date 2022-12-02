@@ -1,9 +1,10 @@
 .product{
     width: 213px;
-    height: 400px;
+    height: 350px;
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
+    background-color: #5cb385;
 }
 .product img{
     width: 199px;

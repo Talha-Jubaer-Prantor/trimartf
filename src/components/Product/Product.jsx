@@ -10,7 +10,7 @@ const Product = ({product, handleAddToCart}) => {
 
     
     return (
-        <div>
+        <div >
             
   <Link style={{color:"black",textDecoration:"none"}} to='/productdetails' state={product}>
         <div className='product'>
@@ -21,9 +21,6 @@ const Product = ({product, handleAddToCart}) => {
                 <p style={{"fontSize":"15px"}}>Category: {category}</p>
             </div>
 
-            {/* <button onClick={() => {handleAddToCart(product)}} className='btn-cart' id='add'>
-                 {/* <FontAwesomeIcon icon={faShoppingCart}/> */}
-            {/* </button> */}
         </div>
         </Link>
 

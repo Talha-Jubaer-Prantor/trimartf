@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import AnotherMenu from "../AnotherMenu/AnotherMenu";
+import Footer from "../Footer/Footer";
 import "./ProductDet.css";
 
 const ProductDet = () => {
@@ -29,20 +30,20 @@ const ProductDet = () => {
   }
 
   return (
-    <div>
+    <div style={{backgroundColor: "#1d3789"}}>
       <AnotherMenu></AnotherMenu>
       <div className="product-det">
         <div>
-          <img style={{ width: "75%" }} src={product.img} alt="" />
+          <img style={{ width: "75%",borderRadius:"15px" }} src={product.img} alt="" />
         </div>
         <div>
           <p>
-            <h3>{product.name}</h3>
+            <h3 style={{color:"white"}}>{product.name}</h3>
           </p>
           <p>
-            <h4>Category:{product.category}</h4>
+            <h4 style={{color:"white"}}>Category:{product.category}</h4>
           </p>
-          <p>
+          <p style={{color:"white"}}>
             Description
             <p>{product.description}</p>
           </p>
@@ -50,12 +51,13 @@ const ProductDet = () => {
             style={{ marginTop: "min(35vh)" }}
             type="button"
             onClick={handleOrder}
-            className="btn btn-success"
+            className="btn btn-danger"
           >
             Add
           </button>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

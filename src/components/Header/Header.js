@@ -16,12 +16,12 @@ const Header = () => {
         <>
           {" "}
           <li className="nav-item">
-            <Link className="nav-link " to="/orders">
+            <Link className="nav-link " to="/orders" style={{color:"white"}}>
               Order
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link " to="/menu">
+            <Link className="nav-link " to="/menu" style={{color:"white"}}>
               Menu
             </Link>
           </li>
@@ -35,7 +35,7 @@ const Header = () => {
     } else {
       return (
         <li className="nav-item">
-          <Link className="nav-link " to="/login">
+          <Link className="nav-link " to="/login" style={{color:"white"}}>
             Login
           </Link>
         </li>
@@ -45,10 +45,10 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-white nav-header">
+      <nav className="navbar navbar-expand-lg nav-header" style={{backgroundColor: "hwb(148deg 15% 40% / 75%)"}}>
         <div className="container-fluid">
           <a className="navbar-brand logo" href="/">
-            <img style={{ width: "200px" }} src="banerLogo.PNG" alt="" />{" "}
+            <img style={{ width: "200px",borderRadius:"15px" }} src="banerLogo.PNG" alt="" />{" "}
           </a>
           <button
             className="navbar-toggler"
@@ -62,9 +62,9 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{backgroundColor:"#00008bb0",borderRadius: "5px"}}>
               <li className="nav-item ">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link active" to="/" style={{color:"white"}}>
                   Home
                 </Link>
               </li>
@@ -75,7 +75,7 @@ const Header = () => {
               </li> */}
               <LogBtn />
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/about">
+                <Link className="nav-link" aria-current="page" to="/about" style={{color:"white"}}>
                   About
                 </Link>
               </li>
@@ -94,7 +94,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <marquee style={{"color":"red","fontSize":"20px"}} behavior="scroll" direction="left">You have to pay advance 30% amount of ordered product. To know more about our terms and condition please click on about section</marquee>
     </div>
   );
 };

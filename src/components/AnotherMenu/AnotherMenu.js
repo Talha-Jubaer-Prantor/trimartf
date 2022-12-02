@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./AnotherMenu.css"
 
 const AnotherMenu = () => {
     return (
-        <div>
-            <nav className="navbar navbar-light bg-light justify-content-between container">
-                <Link className="navbar-brand" to='/'><b>Trimart</b></Link>
+        <div style={{backgroundColor:"#5cb385",paddingTop: "1px",paddingBottom: "2px"}}>
+            <nav className="navbar navbar-light justify-content-between container anotherNav">
+                <Link className="navbar-brand" to='/'><b style={{color:"white"}}>Trimart</b></Link>
                 <div>
-                <b><Link style={{'textDecoration':'none','color':'black'}} className="btn my-2 my-sm-0" to='/'>Home</Link></b>
+                <b><Link style={{'textDecoration':'none','color':'white'}} className="btn my-2 my-sm-0" to='/'>Home</Link></b>
                 </div>
             </nav>
         </div>
