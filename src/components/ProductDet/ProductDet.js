@@ -19,7 +19,7 @@ const ProductDet = () => {
 
   function handleOrder() {
     if (user) {
-      fetch("http://localhost:8080/cart", {
+      fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/cart", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email: user.email, product }),

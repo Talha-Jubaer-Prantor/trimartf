@@ -94,6 +94,9 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <div>
+        <h3 style={{textAlign:"center"}}>You have to pay advance 30% of ordered product</h3>
+      </div>
     </div>
   );
 };

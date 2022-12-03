@@ -7,7 +7,9 @@ const AdminOrder = () => {
   const [confirmedOrders, setConfirmedOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:8080/confirmedorder")
+    fetch(
+      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/confirmedorder"
+    )
       .then((res) => res.json())
       .then((data) => {
         setConfirmedOrders(data);
@@ -17,9 +19,12 @@ const AdminOrder = () => {
 
   const handleDelete = (props) => {
     console.log(props);
-    fetch(`http://localhost:8080/deleteconfirmorder/${props._id}`, {
-      method: "POST",
-    })
+    fetch(
+      `https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/deleteconfirmorder/${props._id}`,
+      {
+        method: "POST",
+      }
+    );
     // .then(window.location.reload());
   };
 

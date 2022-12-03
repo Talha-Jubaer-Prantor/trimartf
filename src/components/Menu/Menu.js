@@ -13,7 +13,7 @@ const Menu = (product) => {
   const userId = user.userId;
   console.log(user);
   useEffect(() => {
-    fetch(`http://localhost:8080/
+    fetch(`https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/
 myorder/${userId}`)
       .then((res) => res.json())
       .then((data) => {

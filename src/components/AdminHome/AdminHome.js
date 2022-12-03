@@ -8,7 +8,7 @@ const AdminHome = (props) => {
   const [orederItems, setOrderItem] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/order")
+    fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/order")
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
@@ -20,13 +20,16 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("http://localhost:8080/confirmorder", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(orderId),
-    }).then((res) => {
+    fetch(
+      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/confirmorder",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(orderId),
+      }
+    ).then((res) => {
       window.location.reload();
     });
   };
@@ -37,13 +40,16 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("http://localhost:8080/deleteorder", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(orderId),
-    }).then(window.location.reload());
+    fetch(
+      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/deleteorder",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(orderId),
+      }
+    ).then(window.location.reload());
   };
   return (
     <div>
