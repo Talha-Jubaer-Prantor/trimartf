@@ -7,24 +7,20 @@ const AdminOrder = () => {
   const [confirmedOrders, setConfirmedOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/confirmedorder")
+    fetch("http://localhost:8080/confirmedorder")
       .then((res) => res.json())
       .then((data) => {
         setConfirmedOrders(data);
         setIsLoading(false);
       });
   }, []);
-  console.log(confirmedOrders);
 
   const handleDelete = (props) => {
     console.log(props);
-    fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/
-deleteconfirmorder/${props._id}`,
-      {
-        method: "delete",
-      }
-    ).then(window.location.reload());
+    fetch(`http://localhost:8080/deleteconfirmorder/${props._id}`, {
+      method: "POST",
+    })
+    // .then(window.location.reload());
   };
 
   return (

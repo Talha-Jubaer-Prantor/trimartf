@@ -21,7 +21,7 @@ const Cart = (props) => {
     }
     const userId = user.userId;
     const orderData = { user: user, orders, userId, transiction };
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/order", {
+    fetch("http://localhost:8080/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

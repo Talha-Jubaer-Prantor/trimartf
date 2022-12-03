@@ -1,10 +1,7 @@
 import React from "react";
 import "./AdminPost.css";
 import AdminNav from "../AdminNav/AdminNav";
-import { useEffect } from "react";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const AdminPost = () => {
   const [previewData, setPreviewData] = useState([]);
@@ -29,7 +26,7 @@ const AdminPost = () => {
 
   const postOrders = (previewData) => {
     const adminPostData = previewData;
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/adminpost", {
+    fetch("http://localhost:8080/adminpost", {
       method: "POST",
       headers: {
         "content-type": "application/json",

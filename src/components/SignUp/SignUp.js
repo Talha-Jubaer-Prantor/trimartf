@@ -1,5 +1,6 @@
 import React from "react";
 import AnotherMenu from "../AnotherMenu/AnotherMenu";
+import Footer from "../Footer/Footer";
 import "./signup.css";
 
 const SignUp = () => {
@@ -22,7 +23,7 @@ const SignUp = () => {
 
     // Post data to backend
 
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/user", {
+    fetch("http://localhost:8080/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -42,7 +43,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "cadetblue" }}>
       <AnotherMenu></AnotherMenu>
       <div className="signup-container">
         <h1>Create Account</h1>
@@ -128,6 +129,7 @@ const SignUp = () => {
           </button>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

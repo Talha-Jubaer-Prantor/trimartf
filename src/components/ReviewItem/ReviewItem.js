@@ -24,8 +24,6 @@ const ReviewItem = (props) => {
             <p>
               Price: <span className="orange-color">{price} BDT</span>
             </p>
-            {/* <p><small>Shipping: ${shipping}</small></p> */}
-            {/* <p><small>Quantity:{quantity}</small></p> */}
           </div>
           <div className="delete-container">
             <button

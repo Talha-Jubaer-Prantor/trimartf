@@ -19,31 +19,35 @@ const ProductDet = () => {
 
   function handleOrder() {
     if (user) {
-      fetch("https://trimartb-talha-jubaer-prantor.vercel.app/cart", {
+      fetch("http://localhost:8080/cart", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email: user.email, product }),
-      });
+      }).then(alert("Order placed. Please check order"));
     } else {
       window.location.replace("/login");
     }
   }
 
   return (
-    <div style={{backgroundColor: "#1d3789"}}>
+    <div style={{ backgroundColor: "#1d3789" }}>
       <AnotherMenu></AnotherMenu>
       <div className="product-det">
         <div>
-          <img style={{ width: "75%",borderRadius:"15px" }} src={product.img} alt="" />
+          <img
+            style={{ width: "75%", borderRadius: "15px" }}
+            src={product.img}
+            alt=""
+          />
         </div>
         <div>
           <p>
-            <h3 style={{color:"white"}}>{product.name}</h3>
+            <h3 style={{ color: "white" }}>{product.name}</h3>
           </p>
           <p>
-            <h4 style={{color:"white"}}>Category:{product.category}</h4>
+            <h4 style={{ color: "white" }}>Category:{product.category}</h4>
           </p>
-          <p style={{color:"white"}}>
+          <p style={{ color: "white" }}>
             Description
             <p>{product.description}</p>
           </p>

@@ -8,7 +8,7 @@ const AdminHome = (props) => {
   const [orederItems, setOrderItem] = useState([]);
 
   useEffect(() => {
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/order")
+    fetch("http://localhost:8080/order")
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
@@ -20,7 +20,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/confirmorder", {
+    fetch("http://localhost:8080/confirmorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,7 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch("https://trimartb-talha-jubaer-prantor.vercel.app/deleteorder", {
+    fetch("http://localhost:8080/deleteorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -149,4 +149,3 @@ const AdminHome = (props) => {
 };
 
 export default AdminHome;
-

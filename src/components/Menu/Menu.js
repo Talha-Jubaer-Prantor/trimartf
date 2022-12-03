@@ -11,8 +11,9 @@ const Menu = (product) => {
 
   const user = JSON.parse(localStorage.getItem("loggedData"));
   const userId = user.userId;
+  console.log(user);
   useEffect(() => {
-    fetch(`https://trimartb-talha-jubaer-prantor.vercel.app/
+    fetch(`http://localhost:8080/
 myorder/${userId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -25,7 +26,7 @@ myorder/${userId}`)
     <div className="menu">
       <AnotherMenu></AnotherMenu>
       <div className="order-status">
-        <h4 style={{ textAlign: "center",color:"white" }}>My Orders</h4>
+        <h4 style={{ textAlign: "center", color: "white" }}>My Orders</h4>
         {/* Menu List */}
 
         {isLoading ? (
@@ -36,7 +37,7 @@ myorder/${userId}`)
               paddingBottom: "25px",
             }}
           >
-            <h1 style={{color:"white"}}>Loading resources...</h1>
+            <h1 style={{ color: "white" }}>Loading resources...</h1>
           </div>
         ) : (
           <div>

@@ -14,9 +14,7 @@ const Orders = () => {
   const [isLoading, setIsLoading] = useState(true);
   const user = JSON.parse(localStorage.getItem("loggedData"));
   useEffect(() => {
-    fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/mycart/${user.email}`
-    )
+    fetch(`http://localhost:8080/mycart/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCart(data);
@@ -26,12 +24,9 @@ const Orders = () => {
 
   const handleRemoveProduct = (product) => {
     console.log(product._id);
-    fetch(
-      `https://trimartb-talha-jubaer-prantor.vercel.app/deletecart/${product._id}`,
-      {
-        method: "DELETE",
-      }
-    ).then((res) => {
+    fetch(`http://localhost:8080/deletecart/${product._id}`, {
+      method: "DELETE",
+    }).then((res) => {
       if (res) {
         console.log(res);
         window.location.reload();

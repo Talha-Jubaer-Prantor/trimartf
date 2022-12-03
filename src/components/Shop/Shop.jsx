@@ -16,7 +16,7 @@ const [isLoading,setIsLoading]=useState(true)
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-      fetch("https://trimartb-talha-jubaer-prantor.vercel.app/product")
+      fetch("http://localhost:8080/product")
         .then((res) => res.json())
         .then((data) => {
               setProducts(data)
@@ -54,7 +54,7 @@ console.log(isLoading)
 
             {
                 isLoading ?
-                <div style={{ textAlign: "center", paddingTop: "25vh", paddingBottom:"25vh" }}><h1>Loading Resources...</h1></div>
+                <div style={{ textAlign: "center", paddingTop: "25vh", paddingBottom:"25vh" }}><h1 style={{color:"white"}}>Loading Resources...</h1></div>
                 :
                 <div className="products-container">
                 {

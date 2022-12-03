@@ -7,4 +7,5 @@
 .cart{
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: #5cb385;
 }
