@@ -119,7 +119,7 @@ const AdminPost = () => {
         </form>
         <div className="preview-sec">
           <div className="product">
-            <img src={previewData.img ? previewData.img : null} alt=""></img>
+            <img style={{backgroundColor:"white"}} src={previewData.img ? previewData.img : null} alt=""></img>
             <div className="product-info">
               <p className="product-name">
                 {previewData.name ? previewData.name : "name"}
@@ -136,7 +136,6 @@ const AdminPost = () => {
               <p style={{ fontSize: "15px" }}>
                 {previewData.category ? previewData.category : ""}
               </p>
-              {/* <p style={{"fontSize":"15px"}}>Category: {previewData.category}</p> */}
             </div>
           </div>
 

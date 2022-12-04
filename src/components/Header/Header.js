@@ -26,7 +26,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" style={{color:"red"}} onClick={logOut} to="/">
+            <Link className="nav-link" style={{color:"white"}} onClick={logOut} to="/">
               Logout
             </Link>
           </li>
@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg nav-header" style={{backgroundColor: "hwb(148deg 15% 40% / 75%)"}}>
+      <nav className="navbar navbar-expand-lg nav-header" style={{backgroundColor: "blueviolet"}}>
         <div className="container-fluid">
           <a className="navbar-brand logo" href="/">
             <img style={{ width: "200px",borderRadius:"15px" }} src="banerLogo.PNG" alt="" />{" "}
@@ -62,7 +62,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{backgroundColor:"#00008bb0",borderRadius: "5px"}}>
+            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{backgroundColor:"crimson",borderRadius: "5px"}}>
               <li className="nav-item ">
                 <Link className="nav-link active" to="/" style={{color:"white"}}>
                   Home
