@@ -4,7 +4,7 @@
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
-    background-color: #5cb385;
+    background-color: blueviolet;
 }
 .product img{
     width: 199px;
@@ -28,6 +28,7 @@
     font-size: 21px;
     line-height: 25px;
     margin-top: 7px;
+    color: white;
 }
 .btn-cart{
     color: cadetblue;

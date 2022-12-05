@@ -21,7 +21,7 @@ const ReviewItem = (props) => {
             <p className="product-name" title={name}>
               {name.length > 20 ? name.slice(0, 20) + "..." : name}
             </p>
-            <p>
+            <p style={{color:"white"}}>
               Price: <span className="orange-color">{price} BDT</span>
             </p>
           </div>

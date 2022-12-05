@@ -16,9 +16,9 @@ const Product = ({product, handleAddToCart}) => {
         <div className='product'>
             <img src={img} alt=""></img>
             <div className='product-info'>
-                <p className='product-name'>{name}</p>
-                <p><b>Price: <span style={{"color":"red"}}>{price} </span></b><span style={{"color":"#03c703"}}>BDT</span></p>
-                <p style={{"fontSize":"15px"}}>Category: {category}</p>
+                <p  className='product-name'>{name}</p>
+                <p style={{"color":"white"}}><b>Price: <span>{price} </span></b><span>BDT</span></p>
+                <p style={{"fontSize":"15px","color":"white"}}>Category: {category}</p>
             </div>
 
         </div>

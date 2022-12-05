@@ -4,7 +4,7 @@ import "./AnotherMenu.css"
 
 const AnotherMenu = () => {
     return (
-        <div style={{backgroundColor:"#5cb385",paddingTop: "1px",paddingBottom: "2px"}}>
+        <div style={{backgroundColor:"white",paddingTop: "1px",paddingBottom: "2px"}}>
             <nav className="navbar navbar-light justify-content-between container anotherNav">
                 <Link className="navbar-brand" to='/'><b style={{color:"white"}}>Trimart</b></Link>
                 <div>

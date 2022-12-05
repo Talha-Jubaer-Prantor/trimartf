@@ -30,7 +30,7 @@ const ProductDet = () => {
   }
 
   return (
-    <div style={{ backgroundColor: "#1d3789" }}>
+    <div style={{ backgroundColor: "" }}>
       <AnotherMenu></AnotherMenu>
       <div className="product-det">
         <div>
