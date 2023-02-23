@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useProducts from '../../hooks/useProducts';
+import Category from '../Category/Category';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
@@ -16,27 +16,14 @@ const [isLoading,setIsLoading]=useState(true)
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-      fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/product")
+      fetch("http://localhost:8080/product")
         .then((res) => res.json())
         .then((data) => {
               setProducts(data)
               setIsLoading(false)
     });
     }, []);
-
-
-
-
-
-
-
 console.log(isLoading)
-
-
-
-
-
-
 
     const [selectedProduct,setSelectedProduct]=useState({})
  
@@ -47,9 +34,9 @@ console.log(isLoading)
     }
     return (
             
-            <div>
-
+            <div style={{backgroundColor:"#eceff7"}}>
                 <Header></Header>
+                <Category></Category>
         <div className='shop-container'>
 
             {

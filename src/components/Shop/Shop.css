@@ -1,5 +1,6 @@
 .shop-container{
     display: grid;
+    background-color: #d1d8d8;
 }
 .products-container{
     display: grid;
@@ -19,7 +20,7 @@
     }
     .shop-container{
         display: grid;
-        background-color: #1d3789;
+        background-color: white;
         width: 100%;
     }
 }

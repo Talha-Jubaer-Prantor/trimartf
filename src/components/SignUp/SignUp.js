@@ -23,7 +23,7 @@ const SignUp = () => {
 
     // Post data to backend
 
-    fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/user", {
+    fetch("http://localhost:8080/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",

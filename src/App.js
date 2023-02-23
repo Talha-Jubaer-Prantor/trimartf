@@ -14,6 +14,7 @@ import AdminControlPage from './components/AdminControlPage/AdminControlPage';
 import About from './components/About/About';
 import ProductDet from './components/ProductDet/ProductDet';
 import UserExists from './components/SignUp/UserExists';
+import CartOrder from './components/CartOrder/CartOrder';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
         <Route path='/controlerpage/order' element={<AdminOrder></AdminOrder>}></Route>
         <Route path='/controlerpage/post' element={<AdminPost></AdminPost>}></Route>
         <Route path='/existinguser' element={<UserExists></UserExists>}></Route>
+
+
+        <Route path='/cartorder' element={<CartOrder></CartOrder>}></Route>
+
 
       </Routes>
       

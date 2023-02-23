@@ -1,10 +1,17 @@
 .product{
     width: 213px;
     height: 350px;
-    border: 1px solid #95A0A7;
+    /* border: 1px solid #95A0A7; */
+    border: none;
     border-radius: 8px;
-    position: relative;
-    background-color: blueviolet;
+    /* position: relative; */
+    background-color: white;
+
+
+
+color: #2e2e2e;
+   
+    box-shadow: 0px 0px 2px #5f5f5f, 6px 6px 12px #a7aaaf,-6px -6px 12px white;
 }
 .product img{
     width: 199px;
@@ -28,7 +35,7 @@
     font-size: 21px;
     line-height: 25px;
     margin-top: 7px;
-    color: white;
+    color: #2e2e2e;
 }
 .btn-cart{
     color: cadetblue;

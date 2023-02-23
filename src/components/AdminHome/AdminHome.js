@@ -8,7 +8,7 @@ const AdminHome = (props) => {
   const [orederItems, setOrderItem] = useState([]);
 
   useEffect(() => {
-    fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/order")
+    fetch("http://localhost:8080/order")
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
@@ -20,16 +20,13 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch(
-      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/confirmorder",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(orderId),
-      }
-    ).then((res) => {
+    fetch("http://localhost:8080/confirmorder", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderId),
+    }).then((res) => {
       window.location.reload();
     });
   };
@@ -40,27 +37,18 @@ const AdminHome = (props) => {
     const orderId = { orderId: id };
     console.log(orderId);
 
-    fetch(
-      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/deleteorder",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(orderId),
-      }
-    ).then(window.location.reload());
+    fetch("http://localhost:8080/deleteorder", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderId),
+    }).then(window.location.reload());
   };
   return (
     <div>
       <AdminNav></AdminNav>
       <div className="home-sec">
-        <div>
-          <p style={{ writingMode: " vertical-rl" }}>
-            ======================= HOME =======================
-          </p>
-        </div>
-
         <div>
           {orederItems.map((orederItem) => (
             <div className="order-sec">

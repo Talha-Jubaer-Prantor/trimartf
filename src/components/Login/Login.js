@@ -16,7 +16,7 @@ const Login = () => {
       password: password,
     };
 
-    fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/signin", {
+    fetch("http://localhost:8080/signin", {
       method: "POST",
       headers: {
         "content-type": "application/json",

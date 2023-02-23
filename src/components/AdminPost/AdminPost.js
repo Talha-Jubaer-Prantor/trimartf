@@ -26,16 +26,13 @@ const AdminPost = () => {
 
   const postOrders = (previewData) => {
     const adminPostData = previewData;
-    fetch(
-      "https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/adminpost",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(adminPostData),
-      }
-    ).then((res) => {
+    fetch("http://localhost:8080/adminpost", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(adminPostData),
+    }).then((res) => {
       if (res) {
         alert("Product posted successfully");
         window.location.reload();
@@ -119,7 +116,11 @@ const AdminPost = () => {
         </form>
         <div className="preview-sec">
           <div className="product">
-            <img style={{backgroundColor:"white"}} src={previewData.img ? previewData.img : null} alt=""></img>
+            <img
+              style={{ backgroundColor: "white" }}
+              src={previewData.img ? previewData.img : null}
+              alt=""
+            ></img>
             <div className="product-info">
               <p className="product-name">
                 {previewData.name ? previewData.name : "name"}

@@ -9,7 +9,6 @@ const ReviewItem = (props) => {
 
 
 
-  // Fetch cart item from backend /mycart/:id
   return (
     <div>
       <div className="review-item">

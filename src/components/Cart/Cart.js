@@ -21,14 +21,17 @@ const Cart = (props) => {
     }
     const userId = user.userId;
     const orderData = { user: user, orders, userId, transiction };
-    fetch("https://trimartb-q671gn75t-talha-jubaer-prantor.vercel.app/order", {
-      method: "POST",
+    fetch("http://localhost:8080/order", {
+      method: "post",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(orderData),
     }).then((res) => {
-      // window.location.replace("/");
+      // if(res){
+      //   console.log(res)
+      //   window.location.replace("/")
+      // }
     });
   };
 

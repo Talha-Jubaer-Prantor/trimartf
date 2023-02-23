@@ -16,17 +16,17 @@ const Header = () => {
         <>
           {" "}
           <li className="nav-item">
-            <Link className="nav-link " to="/orders" style={{color:"white"}}>
+            <Link className="nav-link " to="/orders" style={{fontSize:"large",fontWeight:"bold"}}>
               Order
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link " to="/menu" style={{color:"white"}}>
+            <Link className="nav-link " to="/menu" style={{fontSize:"large",fontWeight:"bold"}}>
               Menu
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" style={{color:"white"}} onClick={logOut} to="/">
+            <Link className="nav-link" style={{fontSize:"large",fontWeight:"bold"}} onClick={logOut} to="/">
               Logout
             </Link>
           </li>
@@ -35,7 +35,7 @@ const Header = () => {
     } else {
       return (
         <li className="nav-item">
-          <Link className="nav-link " to="/login" style={{color:"white"}}>
+          <Link className="nav-link " to="/login" style={{fontSize:"large",fontWeight:"bold"}}>
             Login
           </Link>
         </li>
@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg nav-header" style={{backgroundColor: "blueviolet"}}>
+      <nav className="navbar navbar-expand-lg nav-header" style={{backgroundColor: "white"}}>
         <div className="container-fluid">
           <a className="navbar-brand logo" href="/">
             <img style={{ width: "200px",borderRadius:"15px" }} src="banerLogo.PNG" alt="" />{" "}
@@ -62,35 +62,19 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{backgroundColor:"crimson",borderRadius: "5px"}}>
+            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{borderRadius: "5px",fontWeight:"bold"}}>
               <li className="nav-item ">
-                <Link className="nav-link active" to="/" style={{color:"white"}}>
+                <Link className="nav-link active" to="/" style={{fontSize:"large",fontWeight:"bold"}}>
                   Home
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/orders">
-                  Orders
-                </Link>
-              </li> */}
               <LogBtn />
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/about" style={{color:"white"}}>
+                <Link className="nav-link" aria-current="page" to="/about" style={{fontSize:"large",fontWeight:"bold"}}>
                   About
                 </Link>
               </li>
             </ul>
-            {/* <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form> */}
           </div>
         </div>
       </nav>
